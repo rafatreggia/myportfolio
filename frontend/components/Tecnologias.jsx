@@ -2,7 +2,7 @@ import React from 'react'
 
 const Tecnologias = () => {
   return (
-    <div>Tecnologias</div>
+    <div className='h-screen' id='tecnologias'>Tecnologias</div>
   )
 }
 

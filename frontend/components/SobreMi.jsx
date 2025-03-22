@@ -2,7 +2,7 @@ import React from 'react'
 
 const SobreMi = () => {
   return (
-    <div>SobreMi</div>
+    <div id='sobremi'>SobreMi</div>
   )
 }
 
