@@ -2,7 +2,7 @@ import React from 'react'
 
 const Formulario = () => {
   return (
-    <div>Formulario</div>
+    <div id='formulario'>Formulario</div>
   )
 }
 
