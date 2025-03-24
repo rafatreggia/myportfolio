@@ -1,7 +1,9 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-
+import { Lexend } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
+const lexend = Lexend({ subsets: ["latin"] });
+
 
 export const metadata = {
   title: "Rafa Treggia",
@@ -28,7 +30,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={ `${inter.className} overflow-x-hidden w-screen`}>{children}</body>
+      <body className={ `${lexend.className} overflow-x-hidden w-screen`}>{children}</body>
     </html>
   );
 }
