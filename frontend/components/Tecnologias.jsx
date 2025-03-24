@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import { AnimatedCard } from "./ui/feature-block-animated-card";
 
 const Tecnologias = () => {
   return (
-    <div className='h-screen' id='tecnologias'>Tecnologias</div>
-  )
-}
+    <div className="mt-20" id="tecnologias">
+      <AnimatedCard
+        title="Gestión"
+        description="Utilizo herramientas de primer nivel para gestionar proyectos, monitorear errores y analizar el comportamiento de los usuarios."
+        icons={[]}
+      />
+    </div>
+  );
+};
 
-export default Tecnologias
+export default Tecnologias;
