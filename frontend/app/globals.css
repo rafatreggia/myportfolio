@@ -66,6 +66,15 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+@layer components{
+  .title{
+    @apply text-[#58AF9B]
+    text-[38px]
+    font-semibold
+  }
+}
 html{scroll-behavior: smooth;}
 
 
