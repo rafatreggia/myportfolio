@@ -20,7 +20,7 @@ const Hero = () => {
         </BoxReveal>
         <BoxReveal boxColor={"#58AF9B"} duration={1}>
           <h2 className="md:text-[20px] text-[18px] text-gray-500 max-w-2xl">
-            Soy un desarrollador web Full Stack apasionado por crear
+            Soy un desarrollador web Full Stack developer apasionado por crear
             experiencias digitales innovadoras. Transformo ideas en código
             eficiente y funcional
           </h2>
