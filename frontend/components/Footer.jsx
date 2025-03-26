@@ -1,8 +1,9 @@
+"use client"
 import React from 'react'
 
 const Footer = () => {
   return (
-    <div id='footer'>Footer</div>
+    <div id='footer' className='min-h-[500px]'>Footer</div>
   )
 }
 

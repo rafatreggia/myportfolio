@@ -322,17 +322,16 @@ export function TextAnimate({
         viewport={{ once }}
         {...props}>
         {segments.map((segment, i) => (
-          <motion.span
-            key={`${by}-${segment}-${i}`}
-            variants={finalVariants.item}
-            custom={i * staggerTimings[by]}
-            className={cn(
-              by === "line" ? "block" : "inline-block whitespace-pre",
-              by === "character" && "",
-              segmentClassName
-            )}>
-            {segment}
-          </motion.span>
+         <motion.span
+         key={`${by}-${segment}-${i}`}
+         variants={finalVariants.item}
+         custom={i * staggerTimings[by]}
+         className={cn(
+           by === "line" ? "block" : "inline", // Aquí cambié inline-block por inline
+           segmentClassName
+         )}>
+         {segment}
+       </motion.span>
         ))}
       </MotionComponent>
     </AnimatePresence>

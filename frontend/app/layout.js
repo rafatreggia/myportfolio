@@ -3,6 +3,7 @@ import "./globals.css";
 import { Lexend } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 const lexend = Lexend({ subsets: ["latin"] });
+import { Toaster } from "@/components/ui/toaster"
 
 
 export const metadata = {
@@ -30,7 +31,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={ `${lexend.className} overflow-x-hidden w-screen`}>{children}</body>
+      <body className={ `${lexend.className} overflow-x-hidden w-screen`}>{children}
+      <Toaster />
+      </body>
     </html>
   );
 }
