@@ -77,13 +77,14 @@ const Formulario = () => {
       className="w-full flex flex-col items-center justify-center mt-20"
     >
       <h1 className="title">Mis Redes</h1>
-      <div className="flex items-center justify-center space-x-3 w-full mt-5">
+      <div className="flex items-center justify-center space-x-3 w-full mt-3S">
         {SOCIAL_LINKS.map((link) => (
           <MagneticSocialLink key={link.label} link={link.link}>
             {link.label}
           </MagneticSocialLink>
         ))}
       </div>
+      <h1 className="mt-10">Contactate conmigo...</h1>
       <form
         onSubmit={handleSubmit}
         className="max-w-md mx-auto p-4 bg-white shadow-lg rounded-lg mt-5"
