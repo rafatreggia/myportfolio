@@ -4,7 +4,7 @@ import { TextAnimate } from "./magicui/text-animate";
 
 const SobreMi = () => {
   return (
-    <div id="sobremi" className="mt-[200px] w-full flex flex-col items-center ">
+    <div id="sobreMi" className="mt-[200px] w-full flex flex-col items-center ">
       <h1 className="title">Acerca de Mi</h1>
       <div className="mt-5 flex flex-col justify-around gap-5 w-full items-center lg:flex-row lg:max-w-[1200px] mb-5">
         <TextAnimate
@@ -50,7 +50,8 @@ const SobreMi = () => {
           versión de mí mismo, tanto en mi trabajo como en mi hogar.
         </TextAnimate>
       </div>
-      <div className="mt-5 flex flex-col justify-around gap-5 w-full items-center lg:flex-row lg:max-w-[1200px] mb-4">
+      <a href="/sobreMi" className="text-[#58AF9B]/70 hover:text-[#58AF9B] text-[16px]">Conoce mas sobre mi...</a>
+      {/* <div className="mt-5 flex flex-col justify-around gap-5 w-full items-center lg:flex-row lg:max-w-[1200px] mb-4">
         <TextAnimate
           animation="blurInUp"
           by="character"
@@ -85,7 +86,7 @@ const SobreMi = () => {
           y diversidad de mi país. Cada viaje es una oportunidad para aprender y
           vivir nuevas experiencias
         </TextAnimate>
-      </div>
+      </div> */}
     </div>
   );
 };

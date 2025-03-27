@@ -23,35 +23,35 @@ const Nav = () => {
       icon: (
         <Home className="h-full w-full text-neutral-600 dark:text-neutral-300" />
       ),
-      href: "#hero",
+      href: "/#hero",
     },
     {
       title: "Tecnologías",
       icon: (
         <Code className="h-full w-full text-neutral-600 dark:text-neutral-300" />
       ),
-      href: "#tecnologias",
+      href: "/#tecnologias",
     },
     {
       title: "Sobre Mi",
       icon: (
         <ContactRound className="h-full w-full text-neutral-600 dark:text-neutral-300" />
       ),
-      href: "#sobremi",
+      href: "/#sobreMi",
     },
     {
       title: "Contacto",
       icon: (
         <Smartphone className="h-full w-full text-neutral-600 dark:text-neutral-300" />
       ),
-      href: "#formulario",
+      href: "/#formulario",
     },
     {
       title: "Redes Sociales",
       icon: (
         <Linkedin className="h-full w-full text-neutral-600 dark:text-neutral-300" />
       ),
-      href: "#footer",
+      href: "/#footer",
     },
   ];
   return (

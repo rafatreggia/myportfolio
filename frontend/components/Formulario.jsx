@@ -13,7 +13,7 @@ const Formulario = () => {
   const SOCIAL_LINKS = [
     {
       label: "Github",
-      link: "https://github.com",
+      link: "https://github.com/rafatreggia",
     },
     {
       label: "Twitter",
@@ -21,7 +21,7 @@ const Formulario = () => {
     },
     {
       label: "LinkedIn",
-      link: "https://linkedin.com",
+      link: "https://www.linkedin.com/in/rafael-treggia-189a631b4/",
     },
     {
       label: "Instagram",
@@ -76,7 +76,7 @@ const Formulario = () => {
       id="formulario"
       className="w-full flex flex-col items-center justify-center mt-20"
     >
-      <h1 className="title">Mis Redes</h1>
+      <h1 className="title mb-5">Mis Redes</h1>
       <div className="flex items-center justify-center space-x-3 w-full mt-3S">
         {SOCIAL_LINKS.map((link) => (
           <MagneticSocialLink key={link.label} link={link.link}>
@@ -84,11 +84,12 @@ const Formulario = () => {
           </MagneticSocialLink>
         ))}
       </div>
-      <h1 className="mt-10">Contactate conmigo...</h1>
+      
       <form
         onSubmit={handleSubmit}
-        className="max-w-md mx-auto p-4 bg-white shadow-lg rounded-lg mt-5"
+        className="max-w-md mx-auto p-4 bg-white shadow-lg rounded-lg mt-10"
       >
+        <h1 className="mb-5 font-semibold">Contactate conmigo</h1>
         <div className="mb-4">
           <Label htmlFor="email">Email:</Label>
           <Input

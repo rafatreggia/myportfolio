@@ -1,16 +1,32 @@
 "use client";
 import { AnimatedCard } from "./ui/feature-block-animated-card";
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 
+const useWindowWidth = () => {
+  const [width, setWidth] = useState(
+    typeof window !== "undefined" ? window.innerWidth : 0
+  );
+
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return width;
+};
+
 const Tecnologias = () => {
+  const width = useWindowWidth();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
   return (
-    <div className="" id="tecnologias w-full " ref={ref}>
-      <h1 className="title mb-5 lg:text-center text-start">
+    <div className="" id="tecnologias" ref={ref}>
+      <h1 className="title mb-5 lg:text-center text-start  w-full">
         Stack Tecnológico
       </h1>
       <div className="flex flex-wrap gap-3 justify-center w-full">
@@ -21,7 +37,7 @@ const Tecnologias = () => {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0 }} // Delay en cada card
         >
           <AnimatedCard
-            title="Desarrollo"
+            title="Desarrollo web"
             description="Construyo aplicaciones modernas y escalables utilizando las tecnologías más potentes del ecosistema JavaScript."
             icons={[
               {
@@ -70,6 +86,68 @@ const Tecnologias = () => {
                 size: "sm",
               },
               {
+                icon: (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="2500"
+                    height="2500"
+                    viewBox="0 0 1052 1052"
+                  >
+                    <path fill="#f0db4f" d="M0 0h1052v1052H0z" />
+                    <path
+                      d="M965.9 801.1c-7.7-48-39-88.3-131.7-125.9-32.2-14.8-68.1-25.399-78.8-49.8-3.8-14.2-4.3-22.2-1.9-30.8 6.9-27.9 40.2-36.6 66.6-28.6 17 5.7 33.1 18.801 42.8 39.7 45.4-29.399 45.3-29.2 77-49.399-11.6-18-17.8-26.301-25.4-34-27.3-30.5-64.5-46.2-124-45-10.3 1.3-20.699 2.699-31 4-29.699 7.5-58 23.1-74.6 44-49.8 56.5-35.6 155.399 25 196.1 59.7 44.8 147.4 55 158.6 96.9 10.9 51.3-37.699 67.899-86 62-35.6-7.4-55.399-25.5-76.8-58.4-39.399 22.8-39.399 22.8-79.899 46.1 9.6 21 19.699 30.5 35.8 48.7 76.2 77.3 266.899 73.5 301.1-43.5 1.399-4.001 10.6-30.801 3.199-72.101zm-394-317.6h-98.4c0 85-.399 169.4-.399 254.4 0 54.1 2.8 103.7-6 118.9-14.4 29.899-51.7 26.2-68.7 20.399-17.3-8.5-26.1-20.6-36.3-37.699-2.8-4.9-4.9-8.7-5.601-9-26.699 16.3-53.3 32.699-80 49 13.301 27.3 32.9 51 58 66.399 37.5 22.5 87.9 29.4 140.601 17.3 34.3-10 63.899-30.699 79.399-62.199 22.4-41.3 17.6-91.3 17.4-146.6.5-90.2 0-180.4 0-270.9z"
+                      fill="#323330"
+                    />
+                  </svg>
+                ),
+                size: "sm",
+              },
+              {
+                icon: (
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -1 100 50">
+                    <path d="M7.579 10.123h14.204c4.169.035 7.19 1.237 9.063 3.604 1.873 2.367 2.491 5.6 1.855 9.699-.247 1.873-.795 3.71-1.643 5.512a16.385 16.385 0 01-3.392 4.876c-1.767 1.837-3.657 3.003-5.671 3.498a26.11 26.11 0 01-6.254.742h-6.36l-2.014 10.07H0l7.579-38.001m6.201 6.042l-3.18 15.9c.212.035.424.053.636.053h.742c3.392.035 6.219-.3 8.48-1.007 2.261-.742 3.781-3.321 4.558-7.738.636-3.71 0-5.848-1.908-6.413-1.873-.565-4.222-.83-7.049-.795-.424.035-.83.053-1.219.053h-1.113l.053-.053M41.093 0h7.314L46.34 10.123h6.572c3.604.071 6.289.813 8.056 2.226 1.802 1.413 2.332 4.099 1.59 8.056l-3.551 17.649h-7.42L54.979 21.2c.353-1.767.247-3.021-.318-3.763s-1.784-1.113-3.657-1.113l-5.883-.053-4.346 21.783h-7.314L41.093 0M70.412 10.123h14.204c4.169.035 7.19 1.237 9.063 3.604 1.873 2.367 2.491 5.6 1.855 9.699-.247 1.873-.795 3.71-1.643 5.512a16.385 16.385 0 01-3.392 4.876c-1.767 1.837-3.657 3.003-5.671 3.498a26.11 26.11 0 01-6.254.742h-6.36L70.2 48.124h-7.367l7.579-38.001m6.201 6.042l-3.18 15.9c.212.035.424.053.636.053h.742c3.392.035 6.219-.3 8.48-1.007 2.261-.742 3.781-3.321 4.558-7.738.636-3.71 0-5.848-1.908-6.413-1.873-.565-4.222-.83-7.049-.795-.424.035-.83.053-1.219.053H76.56l.053-.053" />
+                  </svg>
+                ),
+                size: "sm",
+              },
+              {
+                icon: (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="400"
+                    height="400"
+                    viewBox="0 0 400 400"
+                    fill="none"
+                  >
+                    <g clip-path="url(#clip0)">
+                      <path
+                        d="M200 0C89.5321 0 0 89.5321 0 200C0 310.431 89.5321 400 200 400C310.468 400 400 310.468 400 200C399.964 89.5321 310.431 0 200 0ZM150.009 283.306H116.694V116.658H150.009V283.306ZM283.306 283.306H183.324V249.991H283.306V283.306ZM283.306 216.639H183.324V183.324H283.306V216.639ZM283.306 149.973H183.324V116.658H283.306V149.973Z"
+                        fill="#92003B"
+                      ></path>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0">
+                        <rect width="400" height="400" fill="white"></rect>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                ),
+                size: "sm",
+              },
+            ]}
+          />
+        </motion.div>
+        <motion.div
+          className="w-full lg:max-w-sm"
+          initial={{ opacity: 0, x: 100 }} // Dirección de entrada
+          animate={isInView ? { opacity: 1, x: 0 } : {}} // Aparece cuando entra en vista
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }} // Delay en cada card
+        >
+          <AnimatedCard
+            title="Frameworks"
+            description="Utilizo herramientas de primer nivel para gestionar proyectos, monitorear errores y analizar el comportamiento de los usuarios."
+            icons={[
+              {
                 icon: <ReactIcon className="h-8 w-8" />,
                 size: "sm",
               },
@@ -97,18 +175,42 @@ const Tecnologias = () => {
                 ),
                 size: "sm",
               },
+              {
+                icon: (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 54 33"
+                  >
+                    <g clip-path="url(#a)">
+                      <path
+                        fill="#38bdf8"
+                        fill-rule="evenodd"
+                        d="M27 0c-7.2 0-11.7 3.6-13.5 10.8 2.7-3.6 5.85-4.95 9.45-4.05 2.054.513 3.522 2.004 5.147 3.653C30.744 13.09 33.808 16.2 40.5 16.2c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C36.756 3.11 33.692 0 27 0zM13.5 16.2C6.3 16.2 1.8 19.8 0 27c2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C17.244 29.29 20.308 32.4 27 32.4c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C23.256 19.31 20.192 16.2 13.5 16.2z"
+                        clip-rule="evenodd"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="a">
+                        <path fill="#fff" d="M0 0h54v32.4H0z" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                ),
+                size: "sm",
+              },
             ]}
           />
         </motion.div>
         <motion.div
           className="w-full lg:max-w-sm"
-          initial={{ opacity: 0, x: 100 }} // Dirección de entrada
+          initial={{ opacity: 0, x: width < 1000 ? 100 : 0 }} // Dirección de entrada
           animate={isInView ? { opacity: 1, x: 0 } : {}} // Aparece cuando entra en vista
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }} // Delay en cada card
+          transition={{ duration: 0.8, ease: "easeOut", delay: 1 }} // Delay en cada card
         >
           <AnimatedCard
-            title="Gestión"
-            description="Utilizo herramientas de primer nivel para gestionar proyectos, monitorear errores y analizar el comportamiento de los usuarios."
+            title="Diseño & Gestion"
+            description="Creo interfaces atractivas y experiencias de usuario excepcionales utilizando las mejores herramientas de diseño del mercado."
             icons={[
               {
                 icon: (
@@ -139,19 +241,6 @@ const Tecnologias = () => {
                 ),
                 size: "sm",
               },
-            ]}
-          />
-        </motion.div>
-        <motion.div
-          className="w-full lg:max-w-sm"
-          initial={{ opacity: 0, x: 100 }} // Dirección de entrada
-          animate={isInView ? { opacity: 1, x: 0 } : {}} // Aparece cuando entra en vista
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }} // Delay en cada card
-        >
-          <AnimatedCard
-            title="Diseño"
-            description="Creo interfaces atractivas y experiencias de usuario excepcionales utilizando las mejores herramientas de diseño del mercado."
-            icons={[
               {
                 icon: (
                   <svg
