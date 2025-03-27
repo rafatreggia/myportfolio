@@ -18,7 +18,6 @@ export default function Home() {
       <Tecnologias/>
       <SobreMi/>
       <Formulario/>
-      <Footer/>
       
 
     </div>
