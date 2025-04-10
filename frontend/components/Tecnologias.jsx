@@ -302,6 +302,14 @@ const Tecnologias = () => {
           />
         </motion.div>
       </div>
+      <div className="w-full flex justify-center items-center">
+        <a
+          href="/proyectos"
+          className="text-[#58AF9B]/70 hover:text-[#58AF9B] text-[16px] text-center mt-5 w-full "
+        >
+          Conoce mas sobre mis Proyectos...
+        </a>
+      </div>
     </div>
   );
 };

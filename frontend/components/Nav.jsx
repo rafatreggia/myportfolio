@@ -56,8 +56,8 @@ const Nav = () => {
   ];
   return (
     <div className=" fixed bottom-4 left-1/2 z-50 flex -translate-x-1/2 transform items-center justify-center w-full  p-4 text-white  ">
-      <div className="flex items-center justify-center">
-        <Dock className="items-end pb-3">
+      <div className="flex items-center justify-center ">
+        <Dock className="items-end pb-3 ">
           {data.map((item, idx) => (
             <DockItem
               key={idx}
