@@ -36,6 +36,13 @@ const Page = () => {
       link: "https://rafatreggia.vercel.app/",
       tecnologias: ["next.js", "shadcn", "tailwind", "typeScript"],
     },
+    {
+      nombre: "Proyecto Estadistica Volleyball",
+      descripcion:
+        "Desarrollé una app para registrar y visualizar estadísticas de vóley en tiempo real, orientada a mejorar el análisis de rendimiento en partidos y entrenamientos.",
+      link: "https://proyectoestadistica.vercel.app/",
+      tecnologias: ["next.js", "shadcn", "tailwind", "typeScript", "html"],
+    },
     // Puedes agregar más proyectos aquí
   ];
 
