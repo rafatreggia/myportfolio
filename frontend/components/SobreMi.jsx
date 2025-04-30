@@ -37,17 +37,13 @@ const SobreMi = () => {
           className="lg:max-w-[500px] text-center"
         >
           Tengo la suerte de compartir mi vida con mi mujer, quien ha sido mi
-          compañera incondicional en cada etapa, apoyándome en cada desafío y
-          celebrando cada logro juntos. Es increíble cómo la vida cambia cuando
-          encuentras a alguien con quien compartir sueños, proyectos y hasta las
-          pequeñas alegrías del día a día. Nuestro pequeño hijo de seis meses ha
-          traído una luz nueva a nuestras vidas. Su sonrisa ilumina cualquier
-          momento y cada día con él es un nuevo descubrimiento. Desde sus
-          primeras risas hasta sus pequeños intentos por explorar el mundo, ser
-          papá ha sido la experiencia más desafiante y hermosa que he vivido.
-          Aprender a equilibrar mi crecimiento profesional con la paternidad me
-          ha hecho valorar aún más cada instante y esforzarme por ser la mejor
-          versión de mí mismo, tanto en mi trabajo como en mi hogar.
+            compañera incondicional en cada etapa, apoyándome en cada desafío y
+            celebrando cada logro juntos.  Nuestro pequeño hijo de
+            siete meses ha traído una luz nueva a nuestras vidas. Ser papá ha sido la experiencia más
+            desafiante y hermosa que he vivido. Aprender a equilibrar mi
+            crecimiento profesional con la paternidad me ha hecho valorar aún
+            más cada instante y esforzarme por ser la mejor versión de mí mismo,
+            tanto en mi trabajo como en mi hogar.
         </TextAnimate>
       </div>
       <a href="/sobreMi" className="text-[#58AF9B]/70 hover:text-[#58AF9B] text-[16px]">Conoce mas sobre mi...</a>

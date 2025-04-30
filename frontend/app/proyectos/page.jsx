@@ -43,6 +43,13 @@ const Page = () => {
       link: "https://proyectoestadistica.vercel.app/",
       tecnologias: ["next.js", "shadcn", "tailwind", "typeScript", "html"],
     },
+    {
+      nombre: "Proyecto Usuarios",
+      descripcion:
+        "Este proyecto permite gestionar una lista de usuarios de forma dinámica y sencilla. Incluye funciones para agregar, editar y conectar usuarios entre sí con comentarios y amistades.",
+      link: "https://proyectousuarios.vercel.app/",
+      tecnologias: ["next.js", "shadcn", "tailwind", "typeScript", "html"],
+    },
     // Puedes agregar más proyectos aquí
   ];
 
