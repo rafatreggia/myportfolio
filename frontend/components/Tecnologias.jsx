@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const useWindowWidth = () => {
   const [width, setWidth] = useState(
@@ -312,12 +313,13 @@ const Tecnologias = () => {
         </motion.div>
       </div>
       <div className="w-full flex justify-center items-center">
-        <Link
-          href="/proyectos"
-          className="text-[#58AF9B]/80 hover:text-[#58AF9B] text-[16px] text-center mt-5 w-full "
-        >
-          Conoce mas sobre mis Proyectos...
-        </Link>
+      <Link
+        href="/proyectos"
+        className="group flex items-center gap-2 px-6 py-3 rounded-full bg-[#58AF9B]/10 text-[#58AF9B] hover:bg-[#58AF9B]/20 transition-all duration-300 shadow-md hover:shadow-lg mb-10 mt-10"
+      >
+        <span className="text-[16px] font-medium">Conoce más sobre mis Proyectos</span>
+        <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+      </Link>
       </div>
     </div>
   );
