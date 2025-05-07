@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { TextAnimate } from "./magicui/text-animate";
+import Link from "next/link";
 
 const SobreMi = () => {
   return (
@@ -46,7 +47,7 @@ const SobreMi = () => {
             tanto en mi trabajo como en mi hogar.
         </TextAnimate>
       </div>
-      <a href="/sobreMi" className="text-[#58AF9B]/70 hover:text-[#58AF9B] text-[16px]">Conoce mas sobre mi...</a>
+      <Link href="/sobreMi" className="text-[#58AF9B]/70 hover:text-[#58AF9B] text-[16px]">Conoce mas sobre mi...</Link>
       {/* <div className="mt-5 flex flex-col justify-around gap-5 w-full items-center lg:flex-row lg:max-w-[1200px] mb-4">
         <TextAnimate
           animation="blurInUp"
